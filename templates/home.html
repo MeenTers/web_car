@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Database 3D Model</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/bootstrap-4.4.1.css') }}">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/homepage">Database 3D Model</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> <a class="nav-link" href="/homepage">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/show">Showdata</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/index">Adddata</a> </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div  class="container">
+          <div  class="row">
+            <div class="col">
+                <h2>คู่มือการใช้งาน webappdatabase </h2>
+                <p><h4>ถ้าหากต้องการเพิ่มข้อมูลและโมเดล 3 มิติลงในฐานข้อมูลให้ กดคลิกที่ adddata เพื่อเพิ่มข้อมูล</h4></p>
+                <img src="static\images\T1.png" alt="คู่มือ1"width="1200" height="200">
+                <hr></hr>
+                <p><h4> กรอกข้อมูลตามที่ระบบได้กำหนดและทำการอัปโหลดไฟล์โดยใช้นามสกุลเป็น (.obj)</h4></p>
+                <img src="static\images\T2.png" alt="คู่มือ2"width="1200" height="600">
+                <hr></hr>
+                <p><h4> เมื่อกด submit แล้วจะแสดงข้อมูลในฐานข้อมูล</h4></p>
+                <img src="static\images\T3.png" alt="คู่มือ2"width="1200" height="600">
+                <hr></hr>
+                </div>
+            </div>
+      </div>
+</body>
+</html>

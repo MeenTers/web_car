@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Database 3D Model</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/bootstrap-4.4.1.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/homepage">Database 3D Model</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> <a class="nav-link" href="/homepage">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/show">Showdata</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/index">Adddata</a> </li>
+            
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mx-auto">
+            <div class="jumbotron">
+              <div class="row text-center">
+                <div class="text-center col-12">
+                  <h2>ADD DATA</h2>
+                </div>
+                <div class="text-center col-12">
+                  <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
+                  <form action="{{url_for('home')}}"method="post" enctype = "multipart/form-data">
+                    <div class="form-group">
+                      <label for="car_id">ทะเบียนรถ</label>
+                      <input type="text" class="form-control"  name="car_id" placeholder="Car_ID" >
+                      </div>
+                    <div class="form-group">
+                      <label for="fname">ชื่อ</label>
+                      <input type="text" class="form-control"  name="fname" placeholder="ชื่อจริง" >
+                      </div>
+                      <div class="form-group">
+                        <label for="lname">นามสกุล</label>
+                        <input type="text" class="form-control"  name="lname" placeholder="นามสกุล" >
+                        </div>
+                    <div class="form-group">
+                      <label for="insurance">กรมธรรม์  </label>
+                      <!-- <input type="text" class="form-control"  name="insurance" placeholder="กรมธรรม์" > -->
+                      <select  class=" form-select" aria-label="กรมธรรม์" id="insurance" name="insurance">
+                        <option value="ประกันภัยชั้น1">ประกันภัยชั้น1</option>
+                        <option value="ประกันภัยชั้น2">ประกันภัยชั้น2</option>
+                        <option value="ประกันภัยชั้น3">ประกันภัยชั้น3</option>
+                        <option value="ประกันภัยชั้น2+">ประกันภัยชั้น2+</option>
+                        <option value="ประกันภัยชั้น3+">ประกันภัยชั้น3+</option>
+                        <option value="ประกันภัยชั้น4">ประกันภัยชั้น4</option>
+                      </select>
+                      </div>
+
+                        <label for="file">Select a file: 3D model (.obj)</label>
+                        <input type="file" id="file" name="file"><br><br>
+
+                    <p></p>
+                    <button type="submit" class="pull-right btn btn-primary"> ยืนยัน</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
